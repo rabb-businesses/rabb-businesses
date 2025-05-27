@@ -1,0 +1,638 @@
+/* General Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000; /* Black */
+    color: #FFFFFF; /* White for general text */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+header {
+    background-color: #000080; /* Navy Blue */
+    color: #FFFFFF;
+    padding: 15px 0;
+    border-bottom: 3px solid #FFD700; /* Gold */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #FFD700; /* Gold */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFD700; /* Gold */
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #FFD700; /* Gold */
+}
+
+/* Service Hero Section */
+.service-hero {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4); /* Darken background image */
+    z-index: 1;
+}
+
+/* Specific background images for each service */
+.service-hero.business-management::before {
+    background-image: url('../images/business-management-hero.jpg'); /* Placeholder image */
+}
+.service-hero.marketing-management::before {
+    background-image: url('../images/marketing-management-hero.jpg'); /* Placeholder image */
+}
+.service-hero.hr-management::before {
+    background-image: url('../images/hr-management-hero.jpg'); /* Placeholder image */
+}
+.service-hero.ecommerce-management::before {
+    background-image: url('../images/ecommerce-management-hero.jpg'); /* Placeholder image */
+}
+.service-hero.quality-measurement::before {
+    background-image: url('../images/quality-measurement-hero.jpg'); /* Placeholder image */
+}
+
+
+.service-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    border-radius: 8px;
+}
+
+.service-hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold */
+}
+
+.service-hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FFD700; /* Gold */
+    color: #000080; /* Navy Blue */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e6c200; /* Darker Gold */
+    color: #000050; /* Darker Navy Blue */
+}
+
+/* Service Details Section */
+.service-details {
+    padding: 60px 0;
+    background-color: #000000; /* Black */
+    color: #FFFFFF;
+}
+
+.service-details h3 {
+    font-size: 36px;
+    color: #FFD700; /* Gold */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-overview,
+.service-approach,
+.service-case-studies {
+    margin-bottom: 60px;
+}
+
+.service-overview p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.benefit-card {
+    background-color: #000080; /* Navy Blue */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    background-color: #0000a0; /* Slightly lighter navy for hover */
+}
+
+.benefit-card i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold */
+}
+
+.benefit-card h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold */
+}
+
+.benefit-card p {
+    font-size: 16px;
+    color: #E0E0E0; /* Lighter white */
+    line-height: 1.5;
+}
+
+/* Our Approach Section */
+.approach-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    background-color: #000080; /* Navy Blue */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.step-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700; /* Gold */
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #FFD700; /* Gold */
+}
+
+.step-content p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #E0E0E0; /* Lighter white */
+}
+
+/* Success Stories Section */
+.case-study {
+    display: flex;
+    background-color: #000080; /* Navy Blue */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.case-study:hover {
+    transform: translateY(-5px);
+}
+
+.case-img {
+    flex: 1;
+    min-width: 300px; /* Ensures image doesn't get too small */
+}
+
+.case-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.case-content {
+    flex: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.case-content h4 {
+    font-size: 28px;
+    color: #FFD700; /* Gold */
+    margin-bottom: 15px;
+}
+
+.case-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #E0E0E0; /* Lighter white */
+    margin-bottom: 20px;
+}
+
+.read-more {
+    color: #FFD700; /* Gold */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #e6c200; /* Darker Gold */
+}
+
+/* CTA Section */
+.service-cta {
+    background-color: #000080; /* Navy Blue */
+    color: #FFFFFF;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 3px solid #FFD700; /* Gold */
+}
+
+.service-cta h3 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #FFD700; /* Gold */
+}
+
+.service-cta p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #000000; /* Black */
+    color: #FFFFFF;
+    padding: 40px 0 20px;
+    border-top: 3px solid #FFD700; /* Gold */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-about,
+.footer-links,
+.footer-services,
+.footer-contact {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-about .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-about .logo img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.footer-about .logo h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #FFD700; /* Gold */
+}
+
+.footer-about p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #E0E0E0;
+}
+
+footer h4 {
+    font-size: 20px;
+    color: #FFD700; /* Gold */
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+footer h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #FFD700; /* Gold */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #E0E0E0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #FFD700; /* Gold */
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: #E0E0E0;
+}
+
+.footer-contact p i {
+    margin-right: 10px;
+    color: #FFD700; /* Gold */
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #FFD700; /* Gold */
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e6c200; /* Darker Gold */
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    color: #A0A0A0;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .case-study {
+        flex-direction: column;
+    }
+
+    .case-img, .case-content {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .case-img img {
+        height: 250px; /* Fixed height for small screens */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-services,
+    .footer-contact {
+        width: 100%;
+        max-width: 400px; /* Constrain width for better readability on small screens */
+    }
+
+    footer h4 {
+        text-align: center;
+    }
+
+    footer h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer-about .logo {
+        justify-content: center;
+    }
+
+    .footer-contact p {
+        justify-content: center;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    header nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul {
+        display: none; /* Hide desktop menu */
+        flex-direction: column;
+        width: 100%;
+        background-color: #000080; /* Navy Blue */
+        position: absolute;
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        border-top: 1px solid #FFD700;
+        padding-top: 10px;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .service-hero h2 {
+        font-size: 38px;
+    }
+
+    .service-hero p {
+        font-size: 18px;
+    }
+
+    .service-details h3 {
+        font-size: 30px;
+    }
+
+    .benefit-card h4 {
+        font-size: 20px;
+    }
+
+    .step-number {
+        font-size: 30px;
+    }
+
+    .step-content h4 {
+        font-size: 20px;
+    }
+
+    .case-content h4 {
+        font-size: 24px;
+    }
+
+    .service-cta h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 20px;
+    }
+
+    .service-hero h2 {
+        font-size: 30px;
+    }
+
+    .service-hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .service-details h3 {
+        font-size: 26px;
+    }
+
+    .benefit-card i {
+        font-size: 40px;
+    }
+
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .case-content p {
+        font-size: 16px;
+    }
+
+    .service-cta h3 {
+        font-size: 26px;
+    }
+}
